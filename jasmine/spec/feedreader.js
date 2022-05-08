@@ -75,10 +75,10 @@ $(function() {
         * clicked and does it hide when clicked again.
         */
         it('menu chenge when clicked', () => {
-            // menuIcon.trigger('click');
-            expect(bodyHasMenuHidden).toBe(true);
             menuIcon.trigger('click');
             expect(bodyHasMenuHidden).toBe(false);
+            menuIcon.trigger('click');
+            expect(bodyHasMenuHidden).toBe(true);
         })
     });
 
@@ -135,7 +135,5 @@ $(function() {
             expect(firstFeed).not.toEqual(secondFeed);
         })
         
-    })
-
-    
+    })    
 }());
